@@ -12,7 +12,7 @@
         - Github 가입
         - Github Desktop 설치 
 
-- 파이썬 기초
+- 파이썬 용어
     - 콘솔출력
     - 주석
     - 변수
@@ -31,8 +31,17 @@
     
 
 ## 2일차
-- 파이썬 기초
+- 파이썬이란? 
+    - 파이썬 제작자는 귀도 반 로섬이다.
+- 파이썬 제대로 시작하기
     - 흐름제어
-    - 복합자료형 + 연산자
+        - if문(if elif else / 응용_datetime / 짝수홀수 및 배수구하기)
+        - for문(반복문 - 형식 : for i in 리스트) 
+        - while문
+    - 복합자료형 list + 연산자
+        - 리스트 연산 +, * 만 사용
+        - len() / append() / insert() / extend() / del / pop / clear() / sort() / in, not on
+        - reverse(), copy(), count() ... 
+        - 전개 연산자 * 
     - 함수 
     - 구구단, 별찍기
