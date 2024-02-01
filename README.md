@@ -64,7 +64,7 @@
          - 구구단 + 디버깅 
 
         ```python
-         # 디버깅 : 벌레잡기 (최초의 컴퓨터는 코드를 꽂아 코딩했는데, 벌레(버그)로 인해 코딩이 안되는 경우가 있어 이를 제거함에서 유래하였다.)
+        # 디버깅 : 벌레잡기 (최초의 컴퓨터는 코드를 꽂아 코딩했는데, 벌레(버그)로 인해 코딩이 안되는 경우가 있어 이를 제거함에서 유래하였다.)
         # F9 : 중단점 토글
         # F5 : 디버그 시작
         # 조사식 확인!
@@ -121,14 +121,17 @@
                 return 0
     ``` 
     - 텍스트 파일 입출력
-     ```python
-    f = open('파일명', mode='r / w / a', encoding='cp949 / utf-8)
-    f.read()
-    f.readline() # 읽기
-    f.write('text') # 쓰기
-    f.close() # 파일은 반드시 닫는다.
+       ```python
+      f = open('파일명', mode='r / w / a', encoding='cp949 / utf-8)
+      f.read()
+      f.readline() # 읽기
+      f.write('text') # 쓰기
+      f.close() # 파일은 반드시 닫는다.
     ```
     - 가상환경
 - 파이썬 활용
     - 주피터 노트북
-    -
+        - ctrl + shift + p 로 시작 ( > 명령팔레트 )
+        - 사용방법(test_31_jupyter_notebook.ipynb)
+    - folium 기본 사용
+        -    
