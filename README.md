@@ -98,4 +98,37 @@
     - 객체지향
         - 오버로딩, 오버라이딩(재정의)
         - 상속, 다중상속 
-        - 추상클래스, 
+        - 추상클래스
+
+## 4일차
+- 파이썬 기초
+    - 패키지, 모듈 계속
+     - pip 사용
+        ```shell
+        > pip --version # 버전확인
+        > pip list # 현재 설치된 라이브러리 목록 확인
+        > pip install 패키지명 # 패키지를 내 컴퓨터에 설치
+        > pip unistall 패키지명 # 패키지를 삭제
+        ```
+    - 예외처리 : 비정상적인 프로그램 종료 막기 
+         ```python
+        def divide(x, y) :
+            try : 
+                return x / y 
+        # 0을 넣었을때 예외 발생[zerodivision error]
+            except ZeroDivisionError as e : 
+                print('제수는 0이 될 수 없습니다!')
+                return 0
+    ``` 
+    - 텍스트 파일 입출력
+     ```python
+    f = open('파일명', mode='r / w / a', encoding='cp949 / utf-8)
+    f.read()
+    f.readline() # 읽기
+    f.write('text') # 쓰기
+    f.close() # 파일은 반드시 닫는다.
+    ```
+    - 가상환경
+- 파이썬 활용
+    - 주피터 노트북
+    -
