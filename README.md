@@ -128,10 +128,25 @@
       f.write('text') # 쓰기
       f.close() # 파일은 반드시 닫는다.
     ```
-    - 가상환경
-- 파이썬 활용
-    - 주피터 노트북
+
+- 파이썬 응용
+    - jupyter_notebook
         - ctrl + shift + p 로 시작 ( > 명령팔레트 )
         - 사용방법(test_31_jupyter_notebook.ipynb)
     - folium 기본 사용
-        -    
+        - ![folium이미지사용법](https://raw.githubusercontent.com/hyeily0627/Basic-python-2024/main/Images/python_001.png)
+
+## 5일차
+- 파이썬 응용
+    -jupyter_notebook 활용 - 구글 코랩(Google Colab)
+
+
+
+
+
+
+
+
+
+
+    - 가상환경
