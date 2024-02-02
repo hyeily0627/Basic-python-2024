@@ -103,7 +103,7 @@
 ## 4일차
 - 파이썬 기초
     - 패키지, 모듈 계속
-     - pip 사용
+     - pip 사용 (참고 사이트 : https://pypi.org/project/pip/)
         ```shell
         > pip --version # 버전확인
         > pip list # 현재 설치된 라이브러리 목록 확인
@@ -135,14 +135,24 @@
         - 사용방법(test_31_jupyter_notebook.ipynb)
     - folium 기본 사용
         - ![folium이미지사용법](https://raw.githubusercontent.com/hyeily0627/Basic-python-2024/main/Images/python_001.png)
-
+        ```python
+        # 지도 표시 
+        map = folium.Map(location=[35.173999, 129.196649],zoom_start=20, tiles='cartodb positron')
+        # 마커 표시
+        folium.Marker([35.173999, 129.196649], popup='송정해수욕장').add_to(map)
+        # 마커 변경 
+        folium.Marker([35.173999, 129.196649], popup='송정해수욕장', icon=folium.Icon(color='pink',icon='heart-empty')).add_to(map) 
+        
+        #  아이콘 종류 참고 사이트 : https://getbootstrap.com/docs/3.3/components/
+        ``` 
 ## 5일차
 - 파이썬 응용
-    -jupyter_notebook 활용 - 구글 코랩(Google Colab)
-
-
-
-
+    - jupyter_notebook 활용 - 구글 코랩(Google Colab)
+    - folium 계속~
+    - json (JavaScript Object Notation) 입출력
+        - #json 에서는 false가 소문자로 시작하나, 주피터로 출력시켜서 파이썬 출력되면 False로 출력
+    - 응용 예제 연습
+    
 
 
 
