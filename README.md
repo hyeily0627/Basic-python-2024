@@ -153,10 +153,26 @@
         - #json 에서는 false가 소문자로 시작하나, 주피터로 출력시켜서 파이썬 출력되면 False로 출력
     - 응용 예제 연습
     
+## 6일차 
+- 파이썬 응용
+    - Window App(PyQt)
+    ```shell
+    > pip install PyQt5
+    > pip install PyQt5designer
 
+    : 라이브러리 경로 c: - DEV - Langs - Python311 - Lib - site-packages - PyQt5 관련 폴더
+    : PyQt5designer - designer.exe 실행 후 작업표시줄 고정
+    ```
+        - PyQt5 기본 실행 
+            - GIL, 병렬프로세싱 더 학습할 것  
+            - ❗❗❗Thread 학습 : UI Thread와 Background Thread 분리
+        ![Thread예제](https://raw.githubusercontent.com/hyeily0627/Basic-python-2024/main/Images/python_003.gif)
 
-
-
-
-
+       
     - 가상환경
+
+
+    - 객체지향
+        - 오버로딩, 오버라이딩(재정의)
+        - 상속, 다중 상속
+        - 추상클래스, 인터페이스
