@@ -44,41 +44,40 @@
             - reverse( ), copy( ), count( ) ... 
             - (전개 연산자 *) 
         - 듀플
-         ```python
-        ## 튜플 - 리스트 변경, 리스트 조작가능 but 튜플은 조작 불가하다. 
-        tuple_a = (1,3,5,7,9)
+             ```python
+            ## 튜플 - 리스트 변경, 리스트 조작가능 but 튜플은 조작 불가하다. 
+            tuple_a = (1,3,5,7,9)
 
-        for i in tuple_a : 
-            #print(i)
+            for i in tuple_a : 
+                #print(i)
 
-        print(tuple_a[1])  
+            print(tuple_a[1])  
 
-         ## tuple_a[1] = 4  # 'tuple' object does not support item assignment      
-        ```
+            ## tuple_a[1] = 4  # 'tuple' object does not support item assignment      
+            ```
          - 딕셔너리 
-         ```python
-        ## 사전형 - key와 value쌍을 나열해놓은 자료형
-        # { key:value, key:value, key:value,... }
-        ```
+            ```python
+            ## 사전형 - key와 value쌍을 나열해놓은 자료형
+            # { key:value, key:value, key:value,... }
+            ```
         - 출력 포맷
-         - 구구단 + 디버깅 
+        - 구구단 + 디버깅 
+            ```python
+            # 디버깅 : 벌레잡기 (최초의 컴퓨터는 코드를 꽂아 코딩했는데, 벌레(버그)로 인해 코딩이 안되는 경우가 있어 이를 제거함에서 유래하였다.)
+            # F9 : 중단점 토글
+            # F5 : 디버그 시작
+            # 조사식 확인!
+            # F10 : 한 줄씩 실행 
+            # F11 : 함수안으로 진입
+            # shift + F5 : 디버깅 종료
 
-        ```python
-        # 디버깅 : 벌레잡기 (최초의 컴퓨터는 코드를 꽂아 코딩했는데, 벌레(버그)로 인해 코딩이 안되는 경우가 있어 이를 제거함에서 유래하였다.)
-        # F9 : 중단점 토글
-        # F5 : 디버그 시작
-        # 조사식 확인!
-        # F10 : 한 줄씩 실행 
-        # F11 : 함수안으로 진입
-        # shift + F5 : 디버깅 종료
-
-        print('**구구단 시작!**')
-        for x in range(2,10) : # 2부터 9까지 반복
-        print(f'<{x} 단 시작>')
-        for y in range (1,10) : # 1부터 9까지 반복
-        print(f'{x} x {y} = {x * y:2d}', end =' / ') # end = '' 엔터대신 공백으로 처리, / 삽입 
-         print() # 안쪽 for문 종료시 마지막 엔터를 추가 
-        ```
+            print('**구구단 시작!**')
+            for x in range(2,10) : # 2부터 9까지 반복
+            print(f'<{x} 단 시작>')
+            for y in range (1,10) : # 1부터 9까지 반복
+            print(f'{x} x {y} = {x * y:2d}', end =' / ') # end = '' 엔터대신 공백으로 처리, / 삽입 
+            print() # 안쪽 for문 종료시 마지막 엔터를 추가 
+            ```
 
 ## 3일차 
 - 파이썬 기초 
