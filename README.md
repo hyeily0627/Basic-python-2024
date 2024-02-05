@@ -119,7 +119,7 @@
             except ZeroDivisionError as e : 
                 print('제수는 0이 될 수 없습니다!')
                 return 0
-    ``` 
+         ``` 
     - 텍스트 파일 입출력
        ```python
       f = open('파일명', mode='r / w / a', encoding='cp949 / utf-8)
@@ -127,7 +127,7 @@
       f.readline() # 읽기
       f.write('text') # 쓰기
       f.close() # 파일은 반드시 닫는다.
-    ```
+       ```
 
 - 파이썬 응용
     - jupyter_notebook
@@ -162,12 +162,38 @@
 
     : 라이브러리 경로 c: - DEV - Langs - Python311 - Lib - site-packages - PyQt5 관련 폴더
     : PyQt5designer - designer.exe 실행 후 작업표시줄 고정
-    ```
+   
         - PyQt5 기본 실행 
             - GIL, 병렬프로세싱 더 학습할 것  
-            - ❗❗❗Thread 학습 : UI Thread와 Background Thread 분리
-        ![Thread예제](https://raw.githubusercontent.com/hyeily0627/Basic-python-2024/main/Images/python_003.gif)
+            - ❗❗Thread 학습 : UI Thread와 Background Thread 분리
+            ![Thread예제](https://raw.githubusercontent.com/hyeily0627/Basic-python-2024/main/Images/python_003.gif)
 
+```python
+     # 쓰레드 클래스에서 시그널 선언
+    class BackWorker(QThread): # PyQt에서 스레드 클래스 상속
+        initSignal = pyqtSignal(int) # 시그널을 UI스레드로 전달하기위한 변수객체
+        setSignal = pyqtSignal(int)
+        # ...
+
+        def run(self) -> None: # 스레드 실행
+            # 스레드로 동작할 내용
+            maxVal = 1000001
+            self.initSignal.emit(maxVal) # UI쓰레드로 보내기...
+            # ...
+
+    class qtwin_exam(QWidget):  # UI 스레드
+        # ...
+        def btnStartClicked(self):
+            th = BackWorker(self)
+            th.start() # BackWorker 내의 self.run() 실행
+            th.initSignal.connect(self.initPgbTask) # 스레드에서 초기화 시그널이 오면 initPgbTask 슬롯함수가 대신 처리
+            # ...    
+        # 스레드에서 시그널이 넘어오면 UI처리를 대신 해주는 부분 : 슬롯함수 
+        @pyqtSlot(int) # BackWorker 스레드에서 self.setLog.emit() 동작해서 실행
+        def initpgbTask(self, maxVal) : 
+            self.pgbTask.setValue(0)
+            self.pgbTask.setRange(0, maxVal-1)
+```
        
     - 가상환경
 
