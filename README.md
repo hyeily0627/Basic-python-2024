@@ -128,7 +128,6 @@
       f.write('text') # 쓰기
       f.close() # 파일은 반드시 닫는다.
        ```
-
 - 파이썬 응용
     - jupyter_notebook
         - ctrl + shift + p 로 시작 ( > 명령팔레트 )
@@ -162,12 +161,10 @@
     : 라이브러리 경로 c: - DEV - Langs - Python311 - Lib - site-packages - PyQt5 관련 폴더
     : PyQt5designer - designer.exe 실행 후 작업표시줄 고정
     ```
-   
     - PyQt5 기본 실행 
     - GIL, 병렬프로세싱 더 학습할 것  
     - ❗❗Thread 학습 : UI Thread와 Background Thread 분리
         ![Thread예제](https://raw.githubusercontent.com/hyeily0627/Basic-python-2024/main/Images/python_003.gif)
-
 ```python
      # 쓰레드 클래스에서 시그널 선언
     class BackWorker(QThread): # PyQt에서 스레드 클래스 상속
@@ -194,7 +191,7 @@
             self.pgbTask.setValue(0)
             self.pgbTask.setRange(0, maxVal-1)
 ```
-       
+
     - 가상환경
 
 
