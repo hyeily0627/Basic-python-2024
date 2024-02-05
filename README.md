@@ -159,14 +159,14 @@
     ```shell
     > pip install PyQt5
     > pip install PyQt5designer
-
     : 라이브러리 경로 c: - DEV - Langs - Python311 - Lib - site-packages - PyQt5 관련 폴더
     : PyQt5designer - designer.exe 실행 후 작업표시줄 고정
+    ```
    
-        - PyQt5 기본 실행 
-            - GIL, 병렬프로세싱 더 학습할 것  
-            - ❗❗Thread 학습 : UI Thread와 Background Thread 분리
-            ![Thread예제](https://raw.githubusercontent.com/hyeily0627/Basic-python-2024/main/Images/python_003.gif)
+    - PyQt5 기본 실행 
+    - GIL, 병렬프로세싱 더 학습할 것  
+    - ❗❗Thread 학습 : UI Thread와 Background Thread 분리
+        ![Thread예제](https://raw.githubusercontent.com/hyeily0627/Basic-python-2024/main/Images/python_003.gif)
 
 ```python
      # 쓰레드 클래스에서 시그널 선언
