@@ -21,16 +21,21 @@ class WinApp(QWidget):
         lblImages.setPixmap(pixmap)
         
         lblSize = QLabel(self)
-        lblSize.setText(f'{pixmap.width()} x {pixmap.height()}') #python_004.의 사이즈
+        lblSize.setFont(QFont('Century Schoolbook', 20))
+        lblSize.setStyleSheet('color: #336600;') #RGB 색상표 참고 https://www.rapidtables.org/ko/web/color/RGB_Color.html
+        lblSize.setText(f'This picture size {pixmap.width()} x {pixmap.height()}') #python_004.의 사이즈 width x height
+        lblSize.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignCenter) # 가로중앙정렬 | 세로중앙정렬
 
         vbox = QVBoxLayout(self) # QtDesigner에서 verticalLayout 위젯 생성 
         vbox.addWidget(lblImages) # VL에 위젯 추가
         vbox.addWidget(lblSize)
-        self.setLayout(vbox) # Formdp VL 추가아 동일
+        self.setLayout(vbox) 
 
         self.setWindowIcon(QIcon('./images/iot.png'))
         self.setWindowTitle('이미지 뷰어')
-        self.setGeometry(300,300,300,300)
+        rect = QRect (300, 300, 300, 300) #X, Y, w, h
+        self.setGeometry(rect) # 같은 이름의 함수를 여러개 선언 후 골라쓰는 BR(오버로딩)
+        # self.setGeometry(300,300,300,300)
         
         self.show()
         self.setCenter()

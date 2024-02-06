@@ -94,10 +94,6 @@
         - 변수와 함수를 모두 모아둔 곳 : 클래스(Class)
         - 객체 = 클래스가 아님! '클래스에서 하나씩 생성된 객체'로 정의하자
         - 캡슐화 (__platenumber)
-    - 객체지향
-        - 오버로딩, 오버라이딩(재정의)
-        - 상속, 다중상속 
-        - 추상클래스
 
 ## 4일차
 - 파이썬 기초
@@ -161,10 +157,12 @@
     : PyQt5designer - designer.exe 실행 후 작업표시줄 고정
     ```
     - PyQt5 기본 실행 
-    - GIL, 병렬프로세싱 더 학습할 것
+
     - Thread란 ? - 하나의 프로세스 내에서 여러 개의 실행 흐름(단일, 동시적, 병렬적)을 두어 작업을 효율적으로 처리하기 위한 모델 
+        - [ ] GIL, 병렬프로세싱 더 학습할 것
     - ❗❗Thread 학습 : UI Thread와 Background Thread 분리
         ![Thread예제](https://raw.githubusercontent.com/hyeily0627/Basic-python-2024/main/Images/python_003.gif)
+
 ```python
      # 쓰레드 클래스에서 시그널 선언
     class BackWorker(QThread): # PyQt에서 스레드 클래스 상속
@@ -206,23 +204,28 @@
                     else: 
                         QCloseEvent.ignore()    
             ```
-        - 오버로드(overrode) : 한번에 같은 함수를 매개변수를 다르게 하여 사용가능 
+        - 오버로드(overrode) : 한번에 같은 이름의 함수를 매개변수를 다르게 하여 사용가능 
             ```python
-                # Widget 정의에서 확인 가능 
+                # Widget 정의(F12)에서 확인 가능 
                 @typing.overload
                 def setGeometry(self, a0: QtCore.QRect) -> None: ...
                 @typing.overload
                 def setGeometry(self, ax: int, ay: int, aw: int, ah: int) -> None: ...
             ``` 
     - 가상환경 : python 버전이 다른 경우, 다른 버전을 가동시키는 환경
-        - 콘솔 - Set-ExecutionPolicy -ExecutionPolicy RemoteSigned 입력 - y 입력
-        - 다른 버전 설치 - 탐색기 sysdm.cpl - 시스템 속성 : 고급 - 환경변수 : 시스템변수 - path 에서 파이썬 311을 위로 올리기
+        - 1. 콘솔 - Set-ExecutionPolicy -ExecutionPolicy RemoteSigned 입력 - y 입력
+        - 2. 다른 버전 설치 - 탐색기 sysdm.cpl - 시스템 속성 : 고급 - 환경변수 : 시스템변수 - path 에서 파이썬 311(원래 버전)을 위로 올리기
+        - 3. VS Code 터미널 입력 방법 
                 ![터미널 입력](https://raw.githubusercontent.com/hyeily0627/Basic-python-2024/main/Images/python_002.png)
-        - 파이썬 터미널 오른쪽 하단 버전 클릭시 변경 가능
+        - 4. 파이썬 터미널 오른쪽 하단 버전 클릭시 변경 가능
     - PyQt와 응용예제 연습
+        - 이미지 뷰어 
+        - 이미지 에디터 
+            ![PyQt예제](https://raw.githubusercontent.com/hyeily0627/Basic-python-2024/main/Images/python_006.png)
 
-
-
+## 8일차 
+- 파이썬 응용 
+    - PyQt와 응용예제 연습 계속
 
 
     - 객체지향
