@@ -161,7 +161,8 @@
     : PyQt5designer - designer.exe 실행 후 작업표시줄 고정
     ```
     - PyQt5 기본 실행 
-    - GIL, 병렬프로세싱 더 학습할 것  
+    - GIL, 병렬프로세싱 더 학습할 것
+    - Thread란 ? - 하나의 프로세스 내에서 여러 개의 실행 흐름(단일, 동시적, 병렬적)을 두어 작업을 효율적으로 처리하기 위한 모델 
     - ❗❗Thread 학습 : UI Thread와 Background Thread 분리
         ![Thread예제](https://raw.githubusercontent.com/hyeily0627/Basic-python-2024/main/Images/python_003.gif)
 ```python
@@ -191,10 +192,39 @@
             self.pgbTask.setRange(0, maxVal-1)
 ```
 
-    - 가상환경
+## 7일차 
+- 파이썬 응용
+    - 객체지향
+        - 오버라이딩(override) 
+            ```python
+                # QWidget에 있는 closeEvent를 그대로 쓰면 바로 닫히기때문에 
+                # 닫을지 말지 한번 더 물어보는 형태로 다시 구현하고자 재정의 함. 
+                def closeEvent(self,QCloseEvent) -> None: #재정의(override)
+                    re = QMessageBox.question(self, '종료확인', '종료하시겠습니까?', QMessageBox.Yes|QMessageBox.No)
+                    if re == QMessageBox.Yes: #닫기
+                        QCloseEvent.accept()
+                    else: 
+                        QCloseEvent.ignore()    
+            ```
+        - 오버로드(overrode) : 한번에 같은 함수를 매개변수를 다르게 하여 사용가능 
+            ```python
+                # Widget 정의에서 확인 가능 
+                @typing.overload
+                def setGeometry(self, a0: QtCore.QRect) -> None: ...
+                @typing.overload
+                def setGeometry(self, ax: int, ay: int, aw: int, ah: int) -> None: ...
+            ``` 
+    - 가상환경 : python 버전이 다른 경우, 다른 버전을 가동시키는 환경
+        - 콘솔 - Set-ExecutionPolicy -ExecutionPolicy RemoteSigned 입력 - y 입력
+        - 다른 버전 설치 - 탐색기 sysdm.cpl - 시스템 속성 : 고급 - 환경변수 : 시스템변수 - path 에서 파이썬 311을 위로 올리기
+                ![터미널 입력](https://raw.githubusercontent.com/hyeily0627/Basic-python-2024/main/Images/python_002.png)
+        - 파이썬 터미널 오른쪽 하단 버전 클릭시 변경 가능
+    - PyQt와 응용예제 연습
+
+
+
 
 
     - 객체지향
-        - 오버로딩, 오버라이딩(재정의)
         - 상속, 다중 상속
         - 추상클래스, 인터페이스

@@ -33,7 +33,7 @@ class BackWorker (QThread) : # PyQt에서 스레드 클래스 상속
             ### self.parent.txvLog.append(print_str)
             ### self.parent.pgbTask.setValue(i)
 
-class qtwin_exam (QWidget) : # QWidget을 [상속] 받음 = QWidget이 가진 모든 것을 사용할 수 있다 
+class qtwin_exam (QWidget) : # UI 스레드 :  QWidget을 [상속] 받음 = QWidget이 가진 모든 것을 사용할 수 있다 
     def __init__(self) -> None: #self : 내 자신
         super().__init__() #super : 부모 
         uic.loadUi('./day06/ThreadAPP.ui', self) #qtdesigner에서 만든 ui를 로드 
@@ -53,6 +53,7 @@ class qtwin_exam (QWidget) : # QWidget을 [상속] 받음 = QWidget이 가진 �
             QCloseEvent.accept()
         else: 
             QCloseEvent.ignore()    
+
 
     # 스레드에서 시그널이 넘어오면 UI처리를 대신 해주는 부분 : 슬롯함수 
     @pyqtSlot(int) # BackWorker 스레드에서 self.setLog.emit() 동작해서 실행
