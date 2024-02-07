@@ -36,11 +36,11 @@ print('왼쪽으로 별찍기_뒤집어서 출력!')
 #     print(' ')
 # print('오른쪽으로 별찍기 출력완료!')
 
-# # 강사님 풀이
-# for i in range(1, 6) : 
-#     for j in range(6-i) :  
-#         print(' ' , end='')
-#     for j in range(2*i-1) :
-#         print('*' , end='')
-#     print(' ')
-# print('중앙으로 별찍기 출력완료!')
+# 강사님 풀이
+for i in range(1, 6) : 
+    for j in range(6-i) :  
+        print(' ' , end='')
+    for j in range(2*i-1) :
+        print('*' , end='')
+    print(' ')
+print('중앙으로(트리모양) 별찍기 출력완료!')
