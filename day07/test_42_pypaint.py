@@ -16,10 +16,10 @@ class WinApp(QWidget):
         self.initSignal()
 
     def initUI(self): # 화면 초기화 
-        uic.loadUi('./day07/pyPaint.ui', self)
-        self.setWindowIcon(QIcon('./image/그림판.jpg'))
+        # uic.loadUi('./day07/pyPaint.ui', self)
+        uic.loadUi('C:/Sources/Basic-python-2024/day07/pyPaint.ui', self) # 실행파일 생성시에는 절대 경로 사용 
+        self.setWindowIcon(QIcon('C:/Sources/Basic-python-2024/day07/images/iot.png'))
         self.setWindowTitle('py 그림판')
-        self.setWindowIcon(QIcon('./images/iot.png'))
 
         # 캔버스 초기화
         self.brushColor = Qt.black # Black B 대문자 안됨! 
